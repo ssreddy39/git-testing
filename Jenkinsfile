@@ -6,5 +6,10 @@ pipeline {
                 sh 'mvn --version'
             }
         }
+        stage('post-build') {
+            steps {
+                sh 'uname -n'
+            }
+        }
     }
 }
